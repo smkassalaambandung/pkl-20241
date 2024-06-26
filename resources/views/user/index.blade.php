@@ -30,7 +30,7 @@
                     <td>
                         <a href="{{ route('user.show', $item->id) }}" class="btn btn-primary gap-2"><i class="material-icons-outlined">search</i></a>
                         <a href="{{ route('user.edit', $item->id) }}" class="btn btn-warning px-5">Edit</a>
-                        <a class="btn ripple btn-danger px-5" href="#" onclick="event.preventDefault();
+                        <a class="btn ripple btn-danger px-5" href="{{ route('user.destroy', $item->id) }}" onclick="event.preventDefault();
                             document.getElementById('destroy-form').submit();">
                             Hapus
                         </a>
