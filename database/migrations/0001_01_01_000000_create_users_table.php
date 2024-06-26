@@ -18,9 +18,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('is_admin')->default(0);
-            // php artisan migrate:fresh
-            // $table->string('is_admin')->default('user');
-            // $table->enum('is_admin', ['SuperAdmin', 'Admin', 'User'])->default('User');
             $table->rememberToken();
             $table->timestamps();
         });

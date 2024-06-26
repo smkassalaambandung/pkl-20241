@@ -45,8 +45,10 @@
     <!--start main wrapper-->
     <main class="main-wrapper">
         <div class="main-content">
-            <div class="row">
-                @yield('content')
+            <div class="col-xl-12">
+                <div class="row">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </main>

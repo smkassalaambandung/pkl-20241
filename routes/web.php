@@ -1,18 +1,11 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
-    Route::get('data1000', function () {
-        return view('data');
-    })->name('data');
-    Route::get('data200', function () {
-        return view('data');
-    })->name('data2');
-    Route::get('old', function () {
-        return view('data');
-    })->name('old');
+Route::group(['prefix' => 'admin'], function(){
+    Route::resource('user', UserController::class);
 });
 
 Route::get('/', function () {
